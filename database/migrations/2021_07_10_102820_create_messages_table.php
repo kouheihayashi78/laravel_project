@@ -17,6 +17,7 @@ class CreateMessagesTable extends Migration
             $table->increments('id');
             $table->string('view_name', 100);
             $table->string('message');
+            $table->tinyInteger('is_delete')->default(0)->nullable();
             $table->timestamps();
 
         });
